@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jathusan.pebble.colors.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#3369E8"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="Enter Host IP Address:"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#DBE6FF" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear"
+            android:choiceMode="multipleChoice" />
+
+        <EditText
+            android:id="@+id/ipField"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/listView"
+            android:layout_marginTop="33dp"
+            android:layout_toLeftOf="@+id/goButton"
+            android:hint="(ex. 192.168.x.xx)" />
+
+        <Button
+            android:id="@+id/goButton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ipField"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="Connect" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
